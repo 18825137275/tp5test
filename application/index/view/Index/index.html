@@ -1,0 +1,24 @@
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/static/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+<form action="{:url('Index/upload')}" enctype="multipart/form-data" method="post" name="upform">
+<input type="file" name="upfile" />支持的类型： <p />
+<input type="submit" value="上传" />
+</form>
+<hr>
+<form action="{:url('Index/upload')}" method="post" enctype="multipart/form-data">
+<input type="file" name="myfile1" id="idfile1" /><p />
+<input type="file" name="myfile2" id="idfile2" /><p />
+<input type="file" name="myfile[]" id="idfile3" multiple="multiple" /><p />
+<input type="file" name="myfile[]" id="idfile4" multiple="multiple" /><p />
+<input type="submit" value="上传文件" />
+</form>
+<a href="{:url('Index/upload')}?filename=./uploads/7f5262ac041b8875625c08efab71084f.jpg">通过程序下载22.jpg</a><p />
+
+<form method="post" action="{:url('Index/upload')}"  method="post">
+    <h4>登录：</h4>
+    <p class="m-t-md">登录到教师管理后台</p>
+    <input type="text" placeholder="用户名" name="username" />
+    <input type="password" placeholder="密码" name="password" />
+    <input type="text" placeholder="请输入图形验证码" name="captcha" />
+    <div>{:captcha_img()}</div>
+    <button class="btn btn-success btn-block">登录</button>
+</form>
